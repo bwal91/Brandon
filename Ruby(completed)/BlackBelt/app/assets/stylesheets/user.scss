@@ -1,0 +1,278 @@
+a {
+	color: inherit;
+}
+body {
+	background-color: black;
+}
+
+#wrapper {
+	min-width: 1200px;
+	min-height: 1500px;
+	margin: auto;
+	border: 2px solid white;
+	font-size: 20px;
+	background-color: #ac8ccc;
+	color: white;
+	margin-top: 30px;
+	border-radius: 10px;
+}
+#header {
+	margin-top: 30px;
+}
+#welcome {
+	display: inline-block;
+	margin-left: 100px;
+}
+
+#toplinks {
+	margin-left: 500px;
+	margin-right: 50px;
+	color: white;
+}
+
+#your_events {
+	margin-left: 100px;
+}
+
+#my_events {
+	width: 1200px;
+	
+}
+table {
+	border-collapse: collapse;
+	/*width: 1200px;*/
+}
+#this_event tbody,
+#this_event thead  {
+    display: block;
+    border-collapse: collapse;
+   
+}
+
+#all_event tbody  {
+    display: block;
+    border-collapse: collapse;
+   
+}
+#all_event thead {
+	display: block;
+    border-collapse: collapse;
+}
+#other_events tbody  {
+    display: block;
+    border-collapse: collapse;
+   
+}
+#other_events thead {
+	display: block;
+    border-collapse: collapse;
+}
+#my_events tbody  {
+    display: block;
+    border-collapse: collapse;
+   
+}
+#my_events thead {
+	display: block;
+    border-collapse: collapse;
+}
+table tbody {
+	max-height: 400px;
+	overflow: auto;
+
+}
+.this {
+	font-size: 25px;
+	width: 202px;
+}
+.sorttable_nosort {
+	width: 149px;
+}
+.that {
+	width: 200px;
+}
+th, td {
+	padding: 15px;
+	text-align: left;
+}
+
+#name {
+	width: 402px;
+}
+#name_head {
+	width: 422px;
+}
+
+tr:nth-child(even) {background-color: #979599}
+table, th, td {
+	border: 2px solid black;
+}
+#actions {
+	width: 150px;
+}
+#actions a {
+	margin-left: 15px;
+}
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: " \25B4" ;
+}
+#other_events {
+	margin-left: 100px;
+	margin-top: 50px;
+}
+#not_events {
+	width: 1200px;
+}
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    border-right: 1px solid black;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: white;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+#add_event {
+	margin-left: 350px;
+	border: 5px solid black;
+	width: 600px;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+#add {
+	margin-left: 100px;
+	margin-top: 10px;
+}
+label span {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+}
+
+label {
+  position: relative;
+}
+
+label em {
+  position: absolute;
+  right: 5px;
+  top: 20px;
+}
+select {
+	font: 15px sans-serif;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+#all_events {
+	border: 5px solid black;
+	width: 600px;
+	margin-top: 40px;
+	padding-bottom: 20px;
+
+}
+#event_name {
+	width: 488px;
+}
+#register_box {
+	display: inline-block;
+	margin-left: 50px;
+	border: 5px solid black;
+	padding: 40px;
+	padding-top: 0px;
+	margin-top: 50px;
+	vertical-align: top;
+
+}
+
+.hosts {
+	display: inline;
+}
+.host {
+	display: inline;
+}
+
+#this_event {
+	margin-top: 20px;
+	display: inline-block;
+}
+
+#header_event {
+	margin-top: 20px;
+}
+#welcome_event {
+	display: inline-block;
+	margin-left: 100px;
+	margin-top: 50px;
+}
+#toplinks_events {
+	margin-left: 600px;
+	margin-right: 50px;
+	color: white;
+}
+#discussion {
+	vertical-align: top;
+	padding: 0px;
+	margin: 0px;
+	margin-bottom: 20px;
+	text-align: left;
+}
+
+
+#comments {
+	display: inline-block;
+	border-collapse: collapse;
+	max-height: 400px;
+	overflow: auto;
+
+}
+#comments td {
+	width: 400px;
+
+}
+
+#comment {
+	width: 440px;
+	height: 100px;
+}
+#sub_com {
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+#add_comment {
+	margin-left: 870px;
+}
+
+#comment_box {
+	display: inline-block;
+	padding: 0px;
+	margin-left: 120px;
+	text-align: center;
+	margin-top: 40px;
+	vertical-align: top;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+ 

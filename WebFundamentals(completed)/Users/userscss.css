@@ -1,0 +1,36 @@
+#head {
+	display: inline-block;
+	border: 1px solid black;
+	margin-top: 50px;
+	margin-left: 100px;
+
+}
+.a {
+	display: inline-block;
+	margin-right: 30px;
+}
+#firstname {
+	margin-left: 20px;
+}
+#add {
+	font-size: 60px;
+	text-decoration: underline;
+
+}
+#adduser {
+	text-align: center;
+}
+#table {
+	align-content: center;
+	text-align: right;
+	margin-right: 600px;
+}
+.inputfield {
+	margin-top: 20px;
+	height: 20px;
+	width: 150px;
+}
+button {
+	height: 20px;
+	border-radius: 5px;
+}

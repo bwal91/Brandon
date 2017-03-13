@@ -1,0 +1,45 @@
+<%= flash[:notice] %>
+<table>
+	<thead>
+		<tr>
+			<th>Date Payment</th>
+			<th>Date Treasure</th>
+			<th>Expiration Date</th>
+			<th>Online</th>
+			<th>Confirmation</th>
+			<th>Leaving Date</th>
+			<th>Receipt</th>
+			<th>Receipt Book</th>
+			<th>Amount Paid</th>
+			<th>Receipted By</th>
+			<th>Date Base Input</th>
+			<th>Comments</th>
+			<th>Member ID</th>
+		</tr>
+		<% @payments.each do |payment| %>
+		<tr>
+			<td><%= payment.date_payment  %></td>
+			<td><%= payment.date_treasury  %></td>
+			<td><%= payment.trans_date  %></td>
+			<td><%= payment.expiration_date  %></td>
+			<td><%= payment.online  %></td>
+			<td><%= payment.confirmation_number  %></td>
+			<td><%= payment.leaving_date  %></td>
+			<td><%= payment.receipt_number  %></td>
+			<td><%= payment.receipt_book  %></td>
+			<td><%= payment.amount_paid  %></td>
+			<td><%= payment.receipted_by  %></td>
+			<td><%= payment.data_base_input  %></td>
+			<td><%= payment.comments  %></td>
+			<td><%= payment.member_id  %></td>
+		</tr>
+		<% end %>
+	</thead>
+</table>
+<div>
+	<h4>Import that data!</h4>
+	<%= form_tag import_payments_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Import CSV" %>
+	<% end %>
+</div>

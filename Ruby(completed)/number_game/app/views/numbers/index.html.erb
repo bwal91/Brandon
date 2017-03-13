@@ -1,0 +1,39 @@
+<div id="header">
+		<h1>Welcome to the Great Number Game!</h1>
+	</div>
+	<div id="thinking">
+		<h3>I am thinking of a nymber between 1 and 100.<br>Take a guees!</h3>
+	</div>
+	<%= flash[:low] %>
+	<%= flash[:high] %>
+	<%= flash[:correct] %>
+    <% if flash[:low] %>
+    <div id='low'>
+    	<h2>That's too low!</h2>
+      	<h3>Try Again!</h3>
+    </div>
+    <% end %>
+
+    <% if flash[:high] %>
+    <div id='high'>
+   		<h2>That's too high!</h2>
+        <h3>Try again!</h3>
+    </div>
+    <% end %>
+    <% if flash[:correct] %>
+    <div id='right'>
+    	<h2>Yay! <%= session[:number] %> is the number!</h2>
+    	<button><a href="/play_again/">Play Again!</a></button>
+	<% end %>
+	</div>
+	<br>
+	<br>
+	<div id="this">
+		<form action="/submit/" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<input type="number" name="number" id="box1" min='1' max='100'>
+			<br>
+			<br>
+			<div><input type="submit" name="submit" value="Submit" id="but"></div>
+		</form>
+	</div>

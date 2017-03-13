@@ -1,0 +1,182 @@
+Last login: Mon Dec 12 17:55:54 on ttys000
+Brandons-MBP:~ Brandon$ cd Desktop
+Brandons-MBP:Desktop Brandon$ mkdir destination
+Brandons-MBP:Desktop Brandon$ cd destination
+Brandons-MBP:destination Brandon$ ls
+Brandons-MBP:destination Brandon$ cd Desktop
+-bash: cd: Desktop: No such file or directory
+Brandons-MBP:destination Brandon$ cd /
+Brandons-MBP:/ Brandon$ ls
+Applications			etc
+Library				home
+Network				installer.failurerequests
+System				net
+Users				private
+Volumes				sbin
+bin				tmp
+cores				usr
+dev				var
+Brandons-MBP:/ Brandon$ cd Users
+Brandons-MBP:Users Brandon$ ls
+Brandon	Guest	Shared
+Brandons-MBP:Users Brandon$ cd Brandon
+Brandons-MBP:~ Brandon$ cd Desktop
+Brandons-MBP:Desktop Brandon$ cd test
+Brandons-MBP:test Brandon$ ls
+commands.txt	index.html,	index_2.html	style.css,
+Brandons-MBP:test Brandon$ pbcody < index_2.html
+-bash: pbcody: command not found
+Brandons-MBP:test Brandon$ pbcopy < index_2.html
+Brandons-MBP:test Brandon$ cd /
+Brandons-MBP:/ Brandon$ cd Users
+Brandons-MBP:Users Brandon$ cd Brandon
+Brandons-MBP:~ Brandon$ cd Desktop
+Brandons-MBP:Desktop Brandon$ cd destination
+Brandons-MBP:destination Brandon$ pbpaste
+Brandons-MBP:destination Brandon$ pbpaste > index_2.html
+Brandons-MBP:destination Brandon$ cd /
+Brandons-MBP:/ Brandon$ cd Users
+Brandons-MBP:Users Brandon$ cd Brandon
+Brandons-MBP:~ Brandon$ cd Desktop
+Brandons-MBP:Desktop Brandon$ cd test
+Brandons-MBP:test Brandon$ rm -i styles.css,
+rm: styles.css,: No such file or directory
+Brandons-MBP:test Brandon$ rm -i styles.css
+rm: styles.css: No such file or directory
+Brandons-MBP:test Brandon$ rm -i style.css
+rm: style.css: No such file or directory
+Brandons-MBP:test Brandon$ rm -i style.css,
+remove style.css,? y
+Brandons-MBP:test Brandon$ cd /
+Brandons-MBP:/ Brandon$ cd Users
+Brandons-MBP:Users Brandon$ cd Brandon
+Brandons-MBP:~ Brandon$ cd Desktop
+Brandons-MBP:Desktop Brandon$ rm -R destination
+Brandons-MBP:Desktop Brandon$ find /Desktop -main.html
+find: -main.html: unknown primary or operator
+Brandons-MBP:Desktop Brandon$ ping www.google.com
+PING www.google.com (216.58.193.100): 56 data bytes
+64 bytes from 216.58.193.100: icmp_seq=0 ttl=54 time=15.416 ms
+64 bytes from 216.58.193.100: icmp_seq=1 ttl=54 time=25.591 ms
+64 bytes from 216.58.193.100: icmp_seq=2 ttl=54 time=19.926 ms
+64 bytes from 216.58.193.100: icmp_seq=3 ttl=54 time=21.432 ms
+64 bytes from 216.58.193.100: icmp_seq=4 ttl=54 time=106.392 ms
+64 bytes from 216.58.193.100: icmp_seq=5 ttl=54 time=21.742 ms
+64 bytes from 216.58.193.100: icmp_seq=6 ttl=54 time=18.220 ms
+64 bytes from 216.58.193.100: icmp_seq=7 ttl=54 time=19.170 ms
+64 bytes from 216.58.193.100: icmp_seq=8 ttl=54 time=26.316 ms
+64 bytes from 216.58.193.100: icmp_seq=9 ttl=54 time=19.058 ms
+64 bytes from 216.58.193.100: icmp_seq=10 ttl=54 time=22.812 ms
+64 bytes from 216.58.193.100: icmp_seq=11 ttl=54 time=26.570 ms
+64 bytes from 216.58.193.100: icmp_seq=12 ttl=54 time=16.070 ms
+64 bytes from 216.58.193.100: icmp_seq=13 ttl=54 time=23.707 ms
+64 bytes from 216.58.193.100: icmp_seq=14 ttl=54 time=22.950 ms
+64 bytes from 216.58.193.100: icmp_seq=15 ttl=54 time=19.471 ms
+64 bytes from 216.58.193.100: icmp_seq=16 ttl=54 time=15.792 ms
+64 bytes from 216.58.193.100: icmp_seq=17 ttl=54 time=18.450 ms
+64 bytes from 216.58.193.100: icmp_seq=18 ttl=54 time=18.629 ms
+64 bytes from 216.58.193.100: icmp_seq=19 ttl=54 time=20.615 ms
+64 bytes from 216.58.193.100: icmp_seq=20 ttl=54 time=26.140 ms
+64 bytes from 216.58.193.100: icmp_seq=21 ttl=54 time=14.735 ms
+64 bytes from 216.58.193.100: icmp_seq=22 ttl=54 time=17.511 ms
+64 bytes from 216.58.193.100: icmp_seq=23 ttl=54 time=29.591 ms
+64 bytes from 216.58.193.100: icmp_seq=24 ttl=54 time=19.687 ms
+64 bytes from 216.58.193.100: icmp_seq=25 ttl=54 time=21.916 ms
+64 bytes from 216.58.193.100: icmp_seq=26 ttl=54 time=21.635 ms
+64 bytes from 216.58.193.100: icmp_seq=27 ttl=54 time=19.615 ms
+64 bytes from 216.58.193.100: icmp_seq=28 ttl=54 time=31.584 ms
+64 bytes from 216.58.193.100: icmp_seq=29 ttl=54 time=19.110 ms
+64 bytes from 216.58.193.100: icmp_seq=30 ttl=54 time=119.287 ms
+64 bytes from 216.58.193.100: icmp_seq=31 ttl=54 time=23.500 ms
+64 bytes from 216.58.193.100: icmp_seq=32 ttl=54 time=64.354 ms
+64 bytes from 216.58.193.100: icmp_seq=33 ttl=54 time=16.117 ms
+64 bytes from 216.58.193.100: icmp_seq=34 ttl=54 time=39.730 ms
+64 bytes from 216.58.193.100: icmp_seq=35 ttl=54 time=28.799 ms
+64 bytes from 216.58.193.100: icmp_seq=36 ttl=54 time=22.948 ms
+64 bytes from 216.58.193.100: icmp_seq=37 ttl=54 time=17.894 ms
+64 bytes from 216.58.193.100: icmp_seq=38 ttl=54 time=24.072 ms
+64 bytes from 216.58.193.100: icmp_seq=39 ttl=54 time=26.476 ms
+64 bytes from 216.58.193.100: icmp_seq=40 ttl=54 time=24.709 ms
+64 bytes from 216.58.193.100: icmp_seq=41 ttl=54 time=21.044 ms
+64 bytes from 216.58.193.100: icmp_seq=42 ttl=54 time=20.293 ms
+64 bytes from 216.58.193.100: icmp_seq=43 ttl=54 time=17.708 ms
+64 bytes from 216.58.193.100: icmp_seq=44 ttl=54 time=15.406 ms
+64 bytes from 216.58.193.100: icmp_seq=45 ttl=54 time=18.900 ms
+64 bytes from 216.58.193.100: icmp_seq=46 ttl=54 time=18.610 ms
+64 bytes from 216.58.193.100: icmp_seq=47 ttl=54 time=19.323 ms
+64 bytes from 216.58.193.100: icmp_seq=48 ttl=54 time=31.507 ms
+64 bytes from 216.58.193.100: icmp_seq=49 ttl=54 time=26.321 ms
+64 bytes from 216.58.193.100: icmp_seq=50 ttl=54 time=16.704 ms
+64 bytes from 216.58.193.100: icmp_seq=51 ttl=54 time=22.671 ms
+64 bytes from 216.58.193.100: icmp_seq=52 ttl=54 time=18.010 ms
+64 bytes from 216.58.193.100: icmp_seq=53 ttl=54 time=18.068 ms
+64 bytes from 216.58.193.100: icmp_seq=54 ttl=54 time=25.923 ms
+64 bytes from 216.58.193.100: icmp_seq=55 ttl=54 time=18.947 ms
+64 bytes from 216.58.193.100: icmp_seq=56 ttl=54 time=26.010 ms
+64 bytes from 216.58.193.100: icmp_seq=57 ttl=54 time=21.505 ms
+64 bytes from 216.58.193.100: icmp_seq=58 ttl=54 time=22.562 ms
+64 bytes from 216.58.193.100: icmp_seq=59 ttl=54 time=30.164 ms
+64 bytes from 216.58.193.100: icmp_seq=60 ttl=54 time=23.383 ms
+
+64 bytes from 216.58.193.100: icmp_seq=61 ttl=54 time=22.816 ms
+64 bytes from 216.58.193.100: icmp_seq=62 ttl=54 time=24.484 ms
+^[64 bytes from 216.58.193.100: icmp_seq=63 ttl=54 time=18.476 ms
+64 bytes from 216.58.193.100: icmp_seq=64 ttl=54 time=19.155 ms
+sotp
+64 bytes from 216.58.193.100: icmp_seq=65 ttl=54 time=19.298 ms
+64 bytes from 216.58.193.100: icmp_seq=66 ttl=54 time=16.414 ms
+64 bytes from 216.58.193.100: icmp_seq=67 ttl=54 time=30.579 ms
+64 bytes from 216.58.193.100: icmp_seq=68 ttl=54 time=95.069 ms
+64 bytes from 216.58.193.100: icmp_seq=69 ttl=54 time=19.569 ms
+64 bytes from 216.58.193.100: icmp_seq=70 ttl=54 time=58.863 ms
+64 bytes from 216.58.193.100: icmp_seq=71 ttl=54 time=29.168 ms
+64 bytes from 216.58.193.100: icmp_seq=72 ttl=54 time=17.927 ms
+64 bytes from 216.58.193.100: icmp_seq=73 ttl=54 time=21.801 ms
+64 bytes from 216.58.193.100: icmp_seq=74 ttl=54 time=21.128 ms
+64 bytes from 216.58.193.100: icmp_seq=75 ttl=54 time=24.318 ms
+64 bytes from 216.58.193.100: icmp_seq=76 ttl=54 time=20.733 ms
+64 bytes from 216.58.193.100: icmp_seq=77 ttl=54 time=25.427 ms
+64 bytes from 216.58.193.100: icmp_seq=78 ttl=54 time=22.610 ms
+64 bytes from 216.58.193.100: icmp_seq=79 ttl=54 time=22.719 ms
+64 bytes from 216.58.193.100: icmp_seq=80 ttl=54 time=20.542 ms
+64 bytes from 216.58.193.100: icmp_seq=81 ttl=54 time=20.672 ms
+64 bytes from 216.58.193.100: icmp_seq=82 ttl=54 time=16.486 ms
+64 bytes from 216.58.193.100: icmp_seq=83 ttl=54 time=22.233 ms
+64 bytes from 216.58.193.100: icmp_seq=84 ttl=54 time=19.190 ms
+64 bytes from 216.58.193.100: icmp_seq=85 ttl=54 time=28.986 ms
+64 bytes from 216.58.193.100: icmp_seq=86 ttl=54 time=24.381 ms
+64 bytes from 216.58.193.100: icmp_seq=87 ttl=54 time=21.410 ms
+pin64 bytes from 216.58.193.100: icmp_seq=88 ttl=54 time=20.901 ms
+g
+64 bytes from 216.58.193.100: icmp_seq=89 ttl=54 time=28.062 ms
+ping
+64 bytes from 216.58.193.100: icmp_seq=90 ttl=54 time=18.073 ms
+64 bytes from 216.58.193.100: icmp_seq=91 ttl=54 time=23.704 ms
+64 bytes from 216.58.193.100: icmp_seq=92 ttl=54 time=20.174 ms
+64 bytes from 216.58.193.100: icmp_seq=93 ttl=54 time=21.799 ms
+64 bytes from 216.58.193.100: icmp_seq=94 ttl=54 time=16.523 ms
+64 bytes from 216.58.193.100: icmp_seq=95 ttl=54 time=17.846 ms
+64 bytes from 216.58.193.100: icmp_seq=96 ttl=54 time=24.747 ms
+64 bytes from 216.58.193.100: icmp_seq=97 ttl=54 time=26.911 ms
+64 bytes from 216.58.193.100: icmp_seq=98 ttl=54 time=18.712 ms
+64 bytes from 216.58.193.100: icmp_seq=99 ttl=54 time=17.351 ms
+64 bytes from 216.58.193.100: icmp_seq=100 ttl=54 time=18.714 ms
+64 bytes from 216.58.193.100: icmp_seq=101 ttl=54 time=28.140 ms
+64 bytes from 216.58.193.100: icmp_seq=102 ttl=54 time=230.351 ms
+64 bytes from 216.58.193.100: icmp_seq=103 ttl=54 time=46.737 ms
+64 bytes from 216.58.193.100: icmp_seq=104 ttl=54 time=159.135 ms
+64 bytes from 216.58.193.100: icmp_seq=105 ttl=54 time=20.094 ms
+64 bytes from 216.58.193.100: icmp_seq=106 ttl=54 time=68.618 ms
+64 bytes from 216.58.193.100: icmp_seq=107 ttl=54 time=24.467 ms
+64 bytes from 216.58.193.100: icmp_seq=108 ttl=54 time=22.621 ms
+64 bytes from 216.58.193.100: icmp_seq=109 ttl=54 time=24.944 ms
+64 bytes from 216.58.193.100: icmp_seq=110 ttl=54 time=19.674 ms
+64 bytes from 216.58.193.100: icmp_seq=111 ttl=54 time=18.522 ms
+64 bytes from 216.58.193.100: icmp_seq=112 ttl=54 time=19.669 ms
+64 bytes from 216.58.193.100: icmp_seq=113 ttl=54 time=39.845 ms
+64 bytes from 216.58.193.100: icmp_seq=114 ttl=54 time=20.725 ms
+^C
+--- www.google.com ping statistics ---
+115 packets transmitted, 115 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 14.735/28.542/230.351/27.567 ms
+Brandons-MBP:Desktop Brandon$ 

@@ -1,0 +1,91 @@
+#wrapper {
+	width: 1200px;
+	height: 1000px;
+	margin: auto;
+	background-color: grey;
+	border: 2px solid black;
+}
+#header {
+	margin-top: 30px;
+}
+#welcome {
+	display: inline-block;
+	margin-right: 900px;
+	margin-left: 15px;
+}
+.toplinks {
+	margin-left: 50px;
+}
+
+#addbook {
+	margin-left: 35px;
+	width: 800px;
+	display: inline-block;
+
+}
+
+#formbox {
+	display: inline-block;
+	margin-left: 50px;
+	margin-top: 50px;
+
+}
+#choose {
+	margin-left: 50px;
+	width: 130px;
+	border-radius: 5px;
+	height: 30px;
+} 
+
+#formbox p {
+	margin-left: 50px;
+	font-size: 25px;
+	display: inline-block;
+
+}
+
+#formbox h3 {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-size: 30px;
+	margin-right: 30px;
+
+}
+#authorname {
+	margin-left: 50px;
+	width: 300px;
+	height: 30px;
+}
+#textreview {
+	width: 480px;
+	margin-top: 40px;
+}
+#review {
+	vertical-align: top;
+}
+#title {
+	width: 440px;
+	height: 30px;
+}
+
+#rating {
+	height: 30px;
+	width: 60px;
+	border-radius: 5px;
+}
+#button {
+	margin-top: 60px;
+	margin-left: 700px;
+	border-radius: 10px;
+	height: 30px;
+	width: 200px;
+}
+#errors {
+	display: inline-block;
+	width: 250px;
+	vertical-align: top;
+	margin-top: 300px;
+}
+
+
+

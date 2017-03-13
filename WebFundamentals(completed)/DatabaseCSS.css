@@ -1,0 +1,270 @@
+#wrapper {
+	width: 1200px;
+	background-color: pink;
+	margin: 20px auto;
+}
+#tophalf {
+	background-color: white;
+}
+#header {
+	display: inline-block;
+}
+#image {
+	display: inline-block;
+	height: 150px;
+	width: 250px;
+}
+#topright {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 340px;
+	margin-top: 70px;
+	
+}
+#nav {
+	border: 3px solid black;
+
+}
+#nav li {
+	display: inline;
+	padding: 25px 30px 20px;
+	border-right: 3px solid black;
+}
+#nav a {
+	font-size: 25px;
+	color: blue;
+
+}
+#mainbody {
+	background: linear-gradient(black, #583996);
+}
+#databaseimg {
+	height: 300px;
+	width: 500px;
+	margin-left: 20px;
+	border-style: solid;
+	border-width: 15px;
+	border-color: grey;
+	margin-top: 20px;
+}
+.headline {
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+
+}
+#whatdata {
+	display: inline-block;
+	vertical-align: top;
+	color: black;
+	height: 60px;
+	width: 550px;
+	background: linear-gradient(white,grey,white);
+	margin-top: 20px;
+	margin-left: 30px;
+	text-align: left;
+	font-size: 15px;
+}
+#structure {
+	display: inline-block;
+	height: 275px;
+	width: 550px;
+	background-color: white;
+	margin-top: 0px;
+	vertical-align: top;
+	font-size: 17px;
+
+}
+#str {
+	font-size: 20px;
+}
+#info {
+	height: 40px;
+}
+#iconpic {
+	height: 20px;
+	width: 15px;
+	display: inline-block;
+	margin-left: 970px;
+	margin-top: 15px;
+}
+#stack {
+	display: inline-block;
+	vertical-align: top;
+	padding: 0px;
+}
+#stack a {
+	font-size: 15px;
+}
+#stack li {
+	padding: 0px;
+}
+
+#bottom {
+	display: inline-block;
+	height: 60px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+#a {
+	display: inline-block;
+}
+#b {
+	display: inline-block;
+}
+#c {
+	display: inline-block;
+}
+#d {
+	display: inline-block;
+}
+#storage {
+	display: inline-block;
+	vertical-align: top;
+	color: black;
+	height: 60px;
+	width: 250px;
+	background: linear-gradient(white,grey,white);
+	margin-top: 20px;
+	margin-left: 30px;
+	padding: 0px;
+	margin-bottom: 0px;
+		
+}
+#searching {
+	display: inline-block;
+	vertical-align: top;
+	color: black;
+	height: 60px;
+	width: 250px;
+	background: linear-gradient(white,grey,white);
+	margin-top: 20px;
+	margin-left: 30px;
+}
+#interaction {
+	display: inline-block;
+	vertical-align: top;
+	color: black;
+	height: 60px;
+	width: 250px;
+	background: linear-gradient(white,grey,white);
+	margin-top: 20px;
+	margin-left: 30px;
+}
+#companies {
+	display: inline-block;
+	vertical-align: top;
+	color: black;
+	height: 60px;
+	width: 250px;
+	background: linear-gradient(white,grey,white);
+	margin-top: 20px;
+	margin-left: 30px;
+}
+#bottompics {
+	display: inline-block;
+	height: 150px;
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+}
+.pictures {
+	height: 150px;
+	width: 250px;
+
+}
+#pic1 {
+	display: inline-block;
+	margin-left: 30px;
+}
+#pic2 {
+	display: inline-block;
+	margin-left: 30px;
+}
+#pic3 {
+	display: inline-block;
+	margin-left: 30px;
+}
+#pic4 {
+	display: inline-block;
+	margin-left: 30px;
+}
+#bottominfo {
+	display: inline-block;
+	height: 300px;
+}
+#storageinfo {
+	display: inline-block;
+	width: 250px;
+	height: 300px;
+	margin-left: 30px;
+	vertical-align: top;
+	background: linear-gradient(#d2e7f7,white);
+	
+}
+#interactioninfo {
+	display: inline-block;
+	width: 250px;
+	height: 300px;
+	margin-left: 30px;
+	vertical-align: top;
+	background: linear-gradient(#d2e7f7,white);
+
+}
+#searchinginfo {
+	display: inline-block;
+	width: 250px;
+	height: 300px;
+	margin-left: 30px;
+	vertical-align: top;
+	background: linear-gradient(#d2e7f7,white);
+
+}
+#companiesinfo {
+	display: inline-block;
+	width: 250px;
+	height: 300px;
+	margin-left: 30px;
+	vertical-align: top;
+	background: linear-gradient(#d2e7f7,white);
+
+}
+#button1 {
+	margin-top: 40px;
+	margin-left: 140px;
+	height: 30px;
+	background-color: #1c4766;
+	border-radius: 10px;
+	width: 100px;
+	border: 3px solid black;
+	color: white;
+
+}
+#button2 {
+	margin-left: 140px;
+	margin-top: 5px;
+	height: 30px;
+	background-color: #1c4766;
+	border-radius: 10px;
+	width: 100px;
+	border: 3px solid black;
+	color: white;
+}
+#button3 {
+	margin-top: 20px;
+	margin-left: 140px;
+	height: 30px;
+	background-color: #1c4766;
+	border-radius: 10px;
+	width: 100px;
+	border: 3px solid black;
+	color: white;
+}
+#button4 {
+	margin-left: 140px;
+	margin-top: 40px;
+	height: 30px;
+	background-color: #1c4766;
+	border-radius: 10px;
+	width: 100px;
+	border: 3px solid black;
+	color: white;
+}

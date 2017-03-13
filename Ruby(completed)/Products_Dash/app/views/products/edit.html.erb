@@ -1,0 +1,35 @@
+<title>Edit <%= @products.name %></title>
+<%= stylesheet_link_tag "index" %>
+
+<div id="wrapper">
+	<h1>Edit <%= @products.name %></h1>
+	<div id="add">
+		<form action="/update/<%= @products.id %>" method="post">
+			<input type="hidden" name="_method" value="patch">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			Category: <select class="a" name="product[category_id]">
+				<% if @current == nil %>
+				<option selected disabled></option>
+				<% else %>
+				<option selected disabled><%= @current.name %></option>
+				<% end %>
+				<% @category.each do |category| %>
+				<option value="<%= category.id %>"><%= category.name %></option>
+				<% end %>
+				</select><br>
+
+			Name: <input class="a" type="text" name="product[name]" value="<%= @products.name %>"><br>
+			
+			Description: <input class="a" type="text" name="product[description]" value="<%= @products.description %>"><br>
+			
+			Price: <input class="a" type="number" name="product[pricing]" value="<%= @products.pricing %>"><br>
+			
+			<input id="create" type="submit" name="submit" value="Update"><br>
+		<a id="cback" href="/back/" style="color: #4286f4; text-decoration: underline;">Back</a>
+		<a id="cback" href="/show/<%= @products.id %>" style="color: color: #4286f4; text-decoration: underline;">Show</a>
+		</form>
+		<br>
+	</div>
+	<h5 style="color: #4286f4; text-align: center;" > <%= flash[:error] %> </h5>
+</div>
+

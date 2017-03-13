@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+</head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'survey/css/surveyindex.css' %}"media="screen" title="no title"  charset="utf-8">
+<body>
+<div id="wrapper">
+	<div id="surveybox">
+		<form action="/survey" method="post">
+		<div>Your Name: <input type="text" name="firstname" id="a"></div>
+		<div>Dojo Location: <select name="location" id="loc">
+			<option>Seattle</option>
+			<option>San Jose</option>
+			<option>Dallas</option>
+			<option>Chicago</option>
+			</select></div>
+		<div>Favorite Language: <select name="language" id="fav">
+			<option>Python</option>
+			<option>HTML</option> 
+			<option>Ruby</option>
+			<option>JavaScript</option>
+			</select></div>
+		<div>Comment (optional): <textarea name="com" id="comment" rows="4" cols="4"></textarea>
+		</div>
+		<div>
+		{% csrf_token %}
+		<input type="submit" value="Submit" id="sub" name="button" placeholder="Button"></div>
+		</form>
+</div>
+</body>
+</html>

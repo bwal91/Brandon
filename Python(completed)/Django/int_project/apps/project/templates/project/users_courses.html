@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Users Courses</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'project/css/users_courses.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<div id="add">
+		<h1>Add a new course:</h1>
+	</div>
+	<div id="add1">
+		<form action="add/course" method="post" id="form1">
+		<select class="chose" name="usersname">
+			<option>Test</option>
+		</select>
+		<select class="chose" name="courses">
+			<option>Python</option>
+			<option>MEAN</option>
+			<option>Ruby</option>
+			<option>iOS</option>
+			<option>PHP</option>
+		</select>
+		<input type="submit" name="add" value="Add User To Course" id="submitadd">
+		</form>
+	</div>
+	<div id="table">
+		<table id="table1">
+			<tr>
+				<th>Course #:</th>
+				<th>Course Name:</th>
+				<th>Number of Users:</th>
+			</tr>
+			{% for Courses in courses %}
+			<tr>
+			<td>{{Courses.name}}</td>
+			<td>{{Courses.description}}</td>
+			<td>{{Courses.created_at}}</td>
+			</tr>
+			{%endfor%}
+		</table>
+	</div>
+	<div id="return">
+		<a href="/return"> < Return Home </a>
+		<a href="{% url 'courseApp:my_index' %}"> Add More Courses > </a>
+	</div>
+</body>
+</html>

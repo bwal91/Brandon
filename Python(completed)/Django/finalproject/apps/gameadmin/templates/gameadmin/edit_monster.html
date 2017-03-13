@@ -1,0 +1,91 @@
+{% extends "gameadmin/base.html" %} {% include '/gameadmin/base.html' %}
+{% block title %}Admin - Edit Monster{% endblock %}
+{% block loads %}{% load static %} {% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{% static 'gameadmin/css/edit.css' %}" /> {% endblock %}
+{% block scripts %}<script src="{% static 'gameadmin/js/sorttable.js' %}"></script>{% endblock %}
+{%block header %}Admin - Edit Monster{% endblock %}
+{% block content %}
+<div id="body"> 
+ <a href="/mainmenu/admin_menu">Admin Menu</a>
+        <h2>{{monster.name}}</h2>
+
+	<div>
+	<h2 class="this">Current Information</h2>
+     <table class="stats2">
+            <tr>
+                <th class="textleft">Name</th>
+                <th>Class</th>
+                <th>Strength</th>
+                <th>Dexterity</th>
+                <th>Intelligence</th>
+                <th>Health</th>
+                <th class="textleft">Image</th>
+                
+            </tr>
+
+            <tr>
+                <td class="textleft">{{monster.name}}</td>
+                <td>{{monster.mclass}}</td>
+                <td>{{monster.strength}}</td>
+                <td>{{monster.dexterity}}</td>
+                <td>{{monster.intelligence}}</td>
+                <td>{{monster.health}}</td>
+                <td class="textleft">{{monster.image}}</td>
+            </tr>
+        </table>
+	</div>
+
+	<div>
+	<h2 class="this">Make Changes Below</h2>
+	
+        <table class="edit_characters">
+            	<tr>
+                    <th>Name: </th>
+                    <th>Class: </th>
+					<th>Killed By: </th>
+					<th>Strength:</th>
+					<th>Dexterity:</th>
+					<th>Intelligence:</th>
+					<th>Health:</th>
+					<th>Image:</th>
+					<th>Save?:</th>
+                </tr>
+                <tr>
+                <form class="box" action="{% url 'Admin:update_monster' %}" method="post">
+                    <td><input class="nametext" type="text" name="name" value="{{monster.name}}"></td>
+                    <td class="right"><select name="mclass">
+                        <option value="BR">Brute (+5 Strength)</option>
+                        <option value="AS">Assasin (+5 Dexterity)</option>
+                        <option value="MA">Mage (+5 Intelligence)</option>
+                        <option value="EL">Elite (+5 All Stats)</option>
+                    </select></td>
+                    <td><select name="killed_by">
+                    	{% for character in characters %}
+                    	<option value="{{character.id}}">{{character.name}}</option>
+                    	{% endfor %}
+                    </select>
+                    </td>
+                    <td><input class="num" type="text" name="strength" value="{{monster.strength}}"></td>
+                    <td><input class="num" type="text" name="dexterity" value="{{monster.dexterity}}"></td>
+                    <td><input class="num" type="text" name="intelligence" value="{{monster.intelligence}}"></td>
+                    <td><input class="num" type="text" name="health" value="{{monster.health}}"></td>
+                    <td class="nametext"><input type="text" name="image" value="{{monster.image}}"></td>
+                    <td class="right">{% csrf_token %}<input type="submit" name="submit" value="Save Changes"><input type="hidden" name="id" value="{{monster.id}}"></td>
+                </form>
+                </tr>
+        </table>
+	</div>
+    <div>
+        <a href="{% url 'Admin:admin_monsters' %}">Go Back</a>
+        {% if messages %}
+                    <ul class="messages">
+                        {% for message in messages %}
+                            <li {% if message.tags %} class=" {{ message.tags }}" {% endif%}>
+                                {{ message }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+    </div>
+</div>
+{% endblock %}

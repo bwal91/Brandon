@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Reviews</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'belt/css/users.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h2 id="welcome"></h2>
+		<a class="toplinks" href="{% url 'books:index' %}">Home</a>
+		<a class="toplinks" href="{% url 'books:add' %}">Add Book and Review</a>
+		<a class="toplinks" href="logout">Logout</a>
+	</div>
+	<div id="display">
+		<h2>User Allias: {{reviews.0.users.first_name}}</h2>
+		<h2>Name:  {{reviews.0.users.first_name}} {{reviews.0.users.last_name}}</h2>
+		<h2>Email:  {{reviews.0.users.email_add}} </h2>
+		<h2>Total Reviews: {{count.count}}</h2>
+
+	</div>
+	<div id="lowleft">
+		<h2>Posted Reviews on the Following Books:</h2>
+		{% for Reviews in reviews %}
+		<a id="books" href="{{Reviews.book.id}}">{{Reviews.book.book_title}}</a>
+		{% endfor %}
+	</div>
+
+</div>
+</body>
+</html>

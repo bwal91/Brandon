@@ -1,0 +1,97 @@
+#wrapper{
+	width: 1200px;
+	height: 800px;
+	background-color: grey;
+	margin: auto;
+	border: 4px solid black;
+}
+#your {
+	font-size: 20px;
+	margin-top: 40px;
+	margin-left: 50px;
+	display: inline-block;
+	font-weight: bold;
+}
+
+#yourgold {
+	height: 20px;
+	width: 150px;
+	vertical-align: top;
+	margin-left: 20px;
+	border: 2px solid black;
+	border-radius: 10px;
+	display: inline-block;
+	background-color: white;
+	color: black;
+}
+#boxes {
+	margin-top: 50px;
+	display: inline-block;
+}
+.earns {
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.buttons {
+	height: 30px;
+	width: 120px;
+	font-size: 15px;
+	border-radius: 10px;
+	font-weight: bold;
+	background-color: gold;
+	box-shadow: 3px 5px;
+}
+#farmbox {
+	display: inline-block;
+	width: 200px;
+	height: 180px;
+	border:5px solid black;
+	text-align: center;
+	margin-left: 70px;
+}
+
+#cavebox {
+	display: inline-block;
+	width: 200px;
+	height: 180px;
+	border:5px solid black;
+	text-align: center;
+	margin-left: 70px;
+}
+#housebox {
+	display: inline-block;
+	width: 200px;
+	height: 180px;
+	border:5px solid black;
+	text-align: center;
+	margin-left: 70px;
+}
+#casinobox {
+	display: inline-block;
+	width: 200px;
+	height: 180px;
+	border:5px solid black;
+	text-align: center;
+	margin-left: 70px;
+}
+#act {
+	margin-left: 69px;
+	overflow: scroll;
+	width: 1058px;
+	padding: 0px;
+
+}
+#acti {
+	margin-top: 20px;
+	margin-left: 69px;
+	font-size: 20px;
+
+}
+
+
+
+
+
+
+
+

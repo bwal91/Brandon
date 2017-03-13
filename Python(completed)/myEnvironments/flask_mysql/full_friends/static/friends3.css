@@ -1,0 +1,78 @@
+#wrapper {
+	width: 1200px;
+	height: 1000px;
+	border: 2px solid black;
+	background-color: grey;
+	margin: auto;
+}
+
+#heading {
+	text-align: center;
+	margin-top: 50px;
+}
+
+#add_users {
+	margin-left: 300px;
+}
+.box {
+	height: 20px;
+	width: 180px;
+}
+#add {
+	height: 30px;
+	width: 80px;
+	font-weight: bold;
+	border-radius: 5px;
+}
+#forum {
+	display: inline-block;
+	height: auto;
+	border: 2px solid black;
+	margin-left: 200px;
+	width: 820px;
+	background-color: #bf42f4;
+	height: 800px;
+	margin-top: 20px;
+}
+
+#topinfo {
+	display: inline-block;
+	margin-left: 15px;
+	margin-top: 20px;
+}
+h2 {
+	margin-right: 70px;
+	text-decoration: underline;
+	display: inline;
+}
+#act {
+	margin-left: 30px;
+}
+#friendsinfo {
+	display: inline-block;
+	margin-left: 15px;
+}
+.info {
+	font-size: 20px;
+	font-weight: bold;
+}
+#fname {
+	display: inline-block;
+}
+#lname {
+	display: inline-block;
+	margin-left: 120px;
+	text-align: center;
+}
+#emailadd {
+	display: inline-block;
+	margin-left: 130px;
+	text-align: center;
+}
+form {
+	display: inline-block;
+	margin-left: 65px;
+}
+#delete {
+	margin-left: 0px;
+}

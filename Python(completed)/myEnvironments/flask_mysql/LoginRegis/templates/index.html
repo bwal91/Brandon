@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h1>Login & Registration!</h1>
+	</div>
+	<div id="login">
+		<h3 id="a">If you have already registered, please login below:</h3>
+		<form id="login1" action="/login" method="post">
+		<input class="boxa" type="text" name="username" placeholder="Email Address">
+		<input class="boxa" type="text" name="password2" placeholder="Password">
+		<input class="submita" type="submit" name="submit_user" value="Login">
+		</form>
+	</div>
+	<div id="register">
+		<h3 id="b">Enter the information below to register:</h3>
+		<form id="register1" action="/register" method="post">
+		First Name: <input class="box" type="text" name="first_name"><br>
+		Last Name: <input class="box" type="text" name="last_name"><br>
+		Email Address: <input class="box" type="text" name="email_add"><br>
+		Password: <input class="box" type="text" name="password"><br>
+		Re-Enter Password: <input class="box" type="text" name="confirm"><br>
+		<input class="submita" type="submit" value="Register">
+		</form>
+	{% with messages = get_flashed_messages() %}
+	{% if messages %}
+	{% for message in messages %}
+	<p style="color: red;"> {{message}}</p>
+	{%endfor%}
+	{%endif%}
+	{%endwith%}
+
+</div>
+</body>
+</html>

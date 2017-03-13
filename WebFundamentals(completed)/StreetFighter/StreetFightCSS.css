@@ -1,0 +1,25 @@
+#wrapper {
+	width: 1400px;
+	height: 800px;
+	background: black;
+	background-size: cover;
+}
+#selectbox {
+	height: 200px;
+	width: 300px;
+	background-color: grey;
+	border-radius: 15px;
+	margin-left: 540px;
+	text-align: center;
+	margin-top: 250px;
+}
+button {
+	width: 80px;
+}
+h1 {
+	padding-top: 40px;
+	color: #f0a038;
+	text-shadow: 1px 1px #fefefe;
+
+}
+

@@ -1,0 +1,21 @@
+<title>All Comments</title>
+<%= stylesheet_link_tag "index" %>
+
+<div id="wrapper">
+	<h1 style="text-decoration: underline;">All Comments:</h1>
+	<div id="main">
+		<table>
+			<tr>
+				<th>Comments</th>
+				<th>Product</th>
+			</tr>
+			<% @comments.each do |comments| %>
+			<tr>
+				<td> <%= comments.comment %> </td>
+				<td><a style="color: #4286f4; text-decoration: underline;" href="/show/<%= comments.product.id %>"> <%= comments.product.name %></a></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+	<a id="cback" href="/back/" style="color: #4286f4; text-decoration: underline; margin-left: 550px;">Back</a>
+</div>

@@ -1,0 +1,64 @@
+#website {
+	width: 1200px;
+	margin: auto;
+	background-color: grey;
+	border: 2px solid black;
+	height: 700px auto;
+	text-align: center;
+}
+
+#form {
+	width: 400px;
+	height: 30px;
+	vertical-align: top;
+	border-radius: 10px;
+}
+h1 {
+	display: inline-block;
+	margin-top: 200px;
+}
+#button {
+	font-size: 20px;
+	border-radius: 10px;
+	background-color: black;
+	color: white;
+	align-content: center;
+	margin-top: 200px;
+}
+#valid {
+	height: 200px;
+	width: 700px;
+	background-color: green;
+	font-size: 30px;
+	font-weight: bold;
+	align-content: center;
+	display: inline-block;
+	margin-top: 80px;
+	border-radius: 10px;
+}
+.yes {
+	display: inline-block;
+	margin-top: 50px;
+	font-size: 80px;
+
+}
+#notvalid {
+	height: 250px;
+	width: 700px;
+	background-color: red;
+	font-size: 30px;
+	font-weight: bold;
+	align-content: center;
+	display: inline-block;
+	margin-top: 80px;
+	border-radius: 10px;
+}
+#enter {
+	width: 350px;
+	height: auto;
+	border: 2px solid white;
+	background-color: black;
+	color: white;
+	display: inline-block;
+
+}

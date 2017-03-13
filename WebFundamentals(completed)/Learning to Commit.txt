@@ -1,0 +1,52 @@
+Brandons-MBP:Desktop Brandon$ cd test
+Brandons-MBP:test Brandon$ touch index.html styles.css aboutMe.txt
+Brandons-MBP:test Brandon$ git init
+Initialized empty Git repository in /Users/Brandon/Desktop/test/.git/
+Brandons-MBP:test Brandon$ add .
+-bash: add: command not found
+Brandons-MBP:test Brandon$ git add .
+Brandons-MBP:test Brandon$ git commit -m"Created Files"
+[master (root-commit) 598b56b] Created Files
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 aboutMe.txt
+ create mode 100644 index.html
+ create mode 100644 styles.css
+Brandons-MBP:test Brandon$ git commit -m"updated aboutMe"
+On branch master
+Changes not staged for commit:
+	modified:   aboutMe.txt
+
+no changes added to commit
+Brandons-MBP:test Brandon$ git add .
+Brandons-MBP:test Brandon$ git commit -m"added favorite movie to aboutMe"
+[master 0db5bb0] added favorite movie to aboutMe
+ 1 file changed, 1 insertion(+)
+Brandons-MBP:test Brandon$ git log
+commit 0db5bb0600b4a77580b135fba01a84325a243151
+Author: Brandon Walter <bs.walter91@gmail.com>
+Date:   Tue Dec 13 12:48:14 2016 -0800
+
+    added favorite movie to aboutMe
+
+commit 598b56bd30d1065dbf56e7b228872a8db6ae369d
+Author: Brandon Walter <bs.walter91@gmail.com>
+Date:   Tue Dec 13 12:45:07 2016 -0800
+
+    Created Files
+Brandons-MBP:test Brandon$ git revert HEAD
+[master 272908c] Revert "sh"
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Brandons-MBP:test Brandon$ git add .
+Brandons-MBP:test Brandon$ git commit -m"modified aboutMe.txt"
+[master 1d7a982] modified aboutMe.txt
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Brandons-MBP:test Brandon$ 
+
+Opendiff and FileMerge are installed as part of the Mac OS X Developer Tools. This means that if you have XCode installed, you are ready to go. If not, just go to the App Store and install XCode.
+
+To set it up as your default, run the following in the command line:
+
+git config --global merge.tool opendiff
+If you get an error about XCode, run the following:
+
+xcode-select -switch /Applications/Xcode.app/Contents/Developer/

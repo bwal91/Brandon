@@ -1,0 +1,55 @@
+#wrapper {
+	width: 1200px;
+	height: 1000px auto;
+	margin: auto;
+	background-color: grey;
+	border: 2px solid black;
+}
+#header {
+	margin-top: 30px;
+}
+
+#welcome {
+	display: inline-block;
+	margin-right: 600px;
+	margin-left: 15px;
+}
+.toplinks {
+	margin-left: 50px;
+}
+#reviewssection {
+	margin-left: 15px;
+	width: 500px;
+	display: inline-block;
+}
+#reviewssection h1 {
+	margin-bottom: 40px;
+}
+#otherbooks {
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 200px;
+	margin-top: 70px;
+}
+#otherbooks h1 {
+	font-size: 25px;
+}
+
+#text {
+	width: 300px;
+}
+#rating {
+	margin-left: 10px;
+	margin-right: 10px;
+	height: 30px;
+	width: 60px;
+	border-radius: 5px;
+}
+
+#button {
+	/*margin-top: 60px;*/
+	margin-left: 100px;
+	border-radius: 10px;
+	height: 30px;
+	width: 200px;
+}

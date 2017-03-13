@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dojo eCommerce</title>
+</head>
+<body>
+<div id="wrapper">
+	<h1>Welcome to Dojo eCommerce!</h1>
+	<div id="login">
+		<h2>If you already have an account, login below:</h2>
+		<form id="login" action="/login" method="post">
+			<input class="boxa" type="text" name="username" placeholder="Email Address">
+			<input class="boxa" type="password" name="password2" placeholder="Password">
+			{% csrf_token %}
+			<input class="submita" type="submit" name="submit_user" value="Login">
+		</form>
+	</div>
+	<div id="register">
+		<h2>If you are new to eCommerce please register below:</h2>
+		<form id="register1" action="/register" method="post">
+		First Name: <input class="box" type="text" name="first_name"><br>
+		Last Name: <input class="box" type="text" name="last_name"><br>
+		Email Address: <input class="box" type="text" name="email_add"><br>
+		Password: <input class="box" type="password" name="password"><br>
+		Re-Enter Password: <input class="box" type="password" name="confirm"><br>
+		Date of Birth:<input type="date" name="birthday" >
+		<br>
+		{% csrf_token %}
+		<input class="submita" type="submit" value="Register">
+		</form>
+	</div>
+	<div id="errors">
+		{% if messages %}
+		<ul id="messages">
+		{% for message in messages %}
+			<li>{{message}}</li>
+		{% endfor %}
+		{% endif %}
+		</ul>
+	</div>
+</div>
+</body>
+</html>

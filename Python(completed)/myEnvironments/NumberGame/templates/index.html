@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 	<meta charset="utf-8">
+	<title>This is the Number Game</title>
+	<!-- <link rel="stylesheet" type="text/css" href="number.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='flasksucks.css') }}">
+</head>
+<body id="all">
+
+	<div id="header">
+		<h1>Welcome to the Great Number Game!</h1>
+	</div>
+	<div id="thinking">
+		<h3>I am thinking of a nymber between 1 and 100.<br>Take a guees!</h3>
+	</div>
+	{%if session['result']== -1%}
+    <div>
+       	<p></p>
+    </div>
+    {% elif session['result']< session['number']%}
+    <div id='low'>
+    	<h2>That's too low!</h2>
+      	<h3>Try Again!</h3>
+    </div>
+    {% elif session['result']> session['number']%}
+    <div id='high'>
+   		<h2>That's too high!</h2>
+        <h3>Try again!</h3>
+    </div>
+    {% else%}
+    <div id='right'>
+    	<h2>Yay! {{session['number']}} is the number!</h2>
+	{%endif%}
+	</div>
+	<div id="this">
+		<form action="/box" method="post">
+		{%if session['result']!=session['number']%}
+			<input type="number" name="box" id="box1" min='1' max='100'>
+			<div><input type="submit" name="submit" value="Submit" id="but"></div>
+		{%else%}
+            <input type="hidden" name="box" id="box1">
+            <input type="submit" name="submit">
+        {%endif%}
+		</form>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<%= flash[:notice] %>
+
+<table>
+	<thead>
+	<tr>
+		<th>Batch</th>
+		<th>Form?</th>
+		<th>Status</th>
+		<th>Member#</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Address1</th>
+		<th>Address2</th>
+		<th>Address3</th>
+		<th>Post Code</th>
+		<th>City</th>
+		<th>Area</th>
+		<th>Home#</th>
+		<th>Mobile#</th>
+		<th>Nationality</th>
+		<th>Email</th>
+		<th>Emailers?</th>
+		<th>Hard Mail?</th>
+		<th>Working?</th>
+		<th>Company</th>
+		<th>Volunteer?</th>
+		<th>Computer Skills?</th>
+		<th>Finance Skills?</th>
+		<th>member Skills?</th>
+		<th>Interview?</th>
+		<th>Other Skills?</th>
+		<th>Partner?</th>
+		<th>Partner First Name</th>
+		<th>Partner Last Name</th>
+		<th>Partner Company</th>
+		<th>Birthday</th>
+		<th>Language</th>
+		<th>Gender</th>
+		<th>Join Date</th>
+	</tr>
+	<% @members.each do |member| %>
+	<tr>
+		<td><%= member.batch  %></td>
+		<td><%= member.form_completed  %></td>
+		<td><%= member.status  %></td>
+		<td><%= member.memb  %></td>
+		<td><%= member.first_name  %></td>
+		<td><%= member.last_name  %></td>
+		<td><%= member.address1  %></td>
+		<td><%= member.address2  %></td>
+		<td><%= member.address3  %></td>
+		<td><%= member.post_code  %></td>
+		<td><%= member.city  %></td>
+		<td><%= member.area  %></td>
+		<td><%= member.home  %></td>
+		<td><%= member.mobile  %></td>
+		<td><%= member.nationality  %></td>
+		<td><%= member.email  %></td>
+		<td><%= member.emailers  %></td>
+		<td><%= member.hardmail  %></td>
+		<td><%= member.working  %></td>
+		<td><%= member.company  %></td>
+		<td><%= member.volunteer  %></td>
+		<td><%= member.computer_skills  %></td>
+		<td><%= member.skills_finance  %></td>
+		<td><%= member.skills_eventmgmt  %></td>
+		<td><%= member.interview  %></td>
+		<td><%= member.other_skills  %></td>
+		<td><%= member.partner  %></td>
+		<td><%= member.partner_first_name  %></td>
+		<td><%= member.partner_last_name  %></td>
+		<td><%= member.partner_company  %></td>
+		<td><%= member.dob  %></td>
+		<td><%= member.language  %></td>
+		<td><%= member.gender  %></td>
+		<td><%= member.join_date  %></td>
+	</tr>
+	<% end %>
+	</thead>
+</table>
+<div>
+	<h4>Import that data!</h4>
+	<%= form_tag import_members_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Import CSV" %>
+	<% end %>
+</div>
+
+
+
+
+
+
+
+
+

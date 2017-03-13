@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login and Registration</title>
+</head>
+{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'login/css/index.css' %}"media="screen" title="no title"  charset="utf-8">
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h1>Login & Registration!</h1>
+	</div>
+	<div id="login">
+		<h3 id="a">If you have already registered, please login below:</h3>
+		<form id="login1" action="/login" method="post">
+		<input class="boxa" type="text" name="username" placeholder="Email Address">
+		<input class="boxa" type="password" name="password2" placeholder="Password">
+		{% csrf_token %}
+		<input class="submita" type="submit" name="submit_user" value="Login">
+		</form>
+		
+		<h1 id="noemail">{{request.session.nomatch}}</h1>
+		
+	</div>
+	<div id="register">
+		<h3 id="b">Enter the information below to register:</h3>
+		<form id="register1" action="/register" method="post">
+		First Name: <input class="box" type="text" name="first_name"><br>
+		Last Name: <input class="box" type="text" name="last_name"><br>
+		Email Address: <input class="box" type="text" name="email_add"><br>
+		Password: <input class="box" type="password" name="password"><br>
+		Re-Enter Password: <input class="box" type="password" name="confirm"><br>
+		{% csrf_token %}
+		<input class="submita" type="submit" value="Register">
+		</form>
+		{% if messages %}
+            <ul class="messages">
+                {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+</div>
+</body>
+</html>

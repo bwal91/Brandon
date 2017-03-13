@@ -1,0 +1,13 @@
+#head {
+	margin-left: 530px;
+	margin-top: 200px;
+	font-size: 30px;
+}
+#times {
+	margin-left: 600px;
+	font-size: 20px;
+}
+body {
+	border: 2px solid black;
+	height: 600px;
+}

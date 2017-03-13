@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit a Friend!</title>
+</head>
+<!-- <link rel="stylesheet" type="text/css" href="editfriends.css"> -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='editfriends.css') }}">
+<body>
+<div id="wrapper">
+	<div id="heading">
+		<h1>Here is where you <span>Edit</span> the selected <span>Friend:</span></h1>
+	</div>
+	<div id="person">
+		<div id="current">	
+			<h1 id="info">Current Information:</h1>
+			<h2 class="a">First Name:</h2>
+			<h2 class="a">Last Name:</h2>
+			<h2 class="a">Email Address:</h2>
+		
+		</div>	
+		
+		<div id="show">
+			<h2 class="b">{{one_friend['first_name']}}</h2>
+			<h2 class="b">{{one_friend['last_name']}}</h2>
+			<h2 class="b">{{one_friend['email_add']}}</h2>
+		</div>
+		
+		<div id="form">
+			<form id="edit" action="/friends/{{one_friend['id']}}" method="post">
+				<input class="box" type="text" name="first_name" placeholder="First Name">
+				<input class="box" type="text" name="last_name" placeholder="Last Name">
+				<input class="box" type="text" name="email_add" placeholder="Email Address">
+				<input id="add" type="submit" name="submit" value="Submit Edited">
+			</form>
+		</div>
+	
+	</div>
+</div>
+</body>
+</html>

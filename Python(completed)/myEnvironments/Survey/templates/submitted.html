@@ -1,0 +1,15 @@
+<title>Results</title>
+<div id="mainbox">
+	<h1>Submitted Info</h1>
+	<div id="info">
+		<div>Your Name: <%= @name%> </div>
+		<div>Dojo Location: <%= @sublocation%> </div>
+		<div>Favorite Language: <%= @sublanguage%> </div>
+		<div>Comment (optional): <%= @comment%> </div>
+	</div>
+	<form action="/goback" method="post">
+	<div><button name="goback" type="submit" id="gback">Go Back</button></div>
+	</form>
+</div>
+</body>
+</html> 

@@ -1,0 +1,49 @@
+#wrapper {
+	width: 1200px;
+	height: 800px;
+	background-color: purple;
+	border: 2px solid black;
+	margin: auto;
+}
+
+#header {
+	text-align: center;
+	text-decoration: underline;
+	margin-top: 100px;
+}
+#login {
+	text-align: center;
+}
+#register {
+	text-align: center;
+	display: inline-block;
+	margin-left: 350px;
+	margin-top: 50px;
+	
+
+}
+#register1 {
+	display: block;
+	font-size: 25px;
+	text-align: right;
+
+}
+#b {
+	display: inline-block;
+}
+.box {
+	height: 20px;
+	width: 200px;
+	direction: rtl;
+	display: inline-block;
+}
+
+.submita {
+	border-radius: 5px;
+	font-size: 15px;
+	
+}
+.boxa {
+	height: 20px;
+	width: 200px;
+}

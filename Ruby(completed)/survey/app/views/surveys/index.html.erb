@@ -1,0 +1,27 @@
+<title>Dojo Survery!</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='this.css') }}">
+<div id="mainbox">
+
+	<form action="/submit/" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<div>Your Name: <input type="text" name="name" id="a"></div>
+		<div>Dojo Location: <select name="location" id="loc">
+			<% @location.each do |location| %>
+			<option name="location"><%= location[location] %></option>
+			<% end %>
+		</select></div>
+		
+		<div>Favorite Language: <select name="language" id="fav">
+			<% @language.each do |language| %>
+			<option name="language"><%= language[language] %></option>
+			<% end %>
+
+		</select></div>
+
+		<div>Comment (optional): <textarea name="comment" id="comment" rows="4" cols="4"></textarea></div>
+
+		<div><input type="submit" name="submit" placeholder="Submit"></div>
+
+	</form>
+
+</div>

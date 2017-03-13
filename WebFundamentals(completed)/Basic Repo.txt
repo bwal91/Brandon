@@ -1,0 +1,39 @@
+Brandons-MBP:new_project Brandon$ cd -
+/Users/Brandon/Desktop
+Brandons-MBP:Desktop Brandon$ mkdir basicrepo
+Brandons-MBP:Desktop Brandon$ cd basicrepo
+Brandons-MBP:basicrepo Brandon$ git init
+Initialized empty Git repository in /Users/Brandon/Desktop/basicrepo/.git/
+Brandons-MBP:basicrepo Brandon$ touch hello.txt goodbye.txt thisishere.txt
+Brandons-MBP:basicrepo Brandon$ git remote add origin https://github.com/bwal91/basicrepo.git
+Brandons-MBP:basicrepo Brandon$ git add .
+Brandons-MBP:basicrepo Brandon$ git commit -m"Created New Files"
+[master (root-commit) 25382b6] Created New Files
+ 3 files changed, 2 insertions(+)
+ create mode 100644 goodbye.txt
+ create mode 100644 hello.txt
+ create mode 100644 thisishere.txt
+Brandons-MBP:basicrepo Brandon$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (5/5), 355 bytes | 0 bytes/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/bwal91/basicrepo.git
+ * [new branch]      master -> master
+Brandons-MBP:basicrepo Brandon$ add .
+-bash: add: command not found
+Brandons-MBP:basicrepo Brandon$ git add .
+Brandons-MBP:basicrepo Brandon$ git commit -m"Modified goodbye.txt"
+[master 4954d36] Modified goodbye.txt
+ 1 file changed, 1 insertion(+)
+Brandons-MBP:basicrepo Brandon$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 342 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/bwal91/basicrepo.git
+   25382b6..4954d36  master -> master
+Brandons-MBP:basicrepo Brandon$ 
+

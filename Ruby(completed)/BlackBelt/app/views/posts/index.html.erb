@@ -1,0 +1,38 @@
+<div id="wrapper">
+	<div id="top_links">
+		<h1> Hi <%= @user.name %> </h1>
+		<a href="/logout">Logout</a>
+	</div>
+	<div id="add_idea">
+		<form action="/create/idea" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			<p>
+				<label for="idea">
+				</label>
+				<textarea id="idea" name="idea[idea]"></textarea>
+				<input type="hidden" name="idea[user_id]" value="<%=session[:user_id]%>">
+			</p>
+			<input type="submit" name="submit" value="Idea!">
+		</form>
+		<%= flash[:error] %>
+	</div>
+	<div id="other_ideas">
+		<% @idea.each do |idea| %>
+		<p><a href="/user/<%= idea.user.id %>"><%= idea.user.alias %></a> says: </p>
+			<% if idea.user.id == session[:user_id] %><a href="/delete/<%= idea.id %>">Delete</a><% end %>
+		<textarea readonly><%= idea.idea %></textarea>
+		<a href="/like/<%= idea.id %>">Like</a>
+		<a href="/show/<%= idea.id %>">
+		<%= likes = Post.joins(:likes).where("likes.post_id == #{idea.id}").count %> people </a> like this.
+		<% end %>
+
+		<% @no_like.each do |idea| %>
+		<p><a href="/user/<%= idea.user.id %>"><%= idea.user.alias %></a> says: </p>
+
+		<textarea readonly><%= idea.idea %></textarea>
+		<a href="/like/<%= idea.id %>">Like</a>
+		<a href="/show/<%= idea.id %>">
+		<%= likes = Post.joins(:likes).where("likes.post_id = #{idea.id}").count %> people </a> like this.
+		<% end %>
+	</div>
+</div>

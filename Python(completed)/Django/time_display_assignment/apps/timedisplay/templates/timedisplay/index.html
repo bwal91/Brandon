@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display Time</title>
+</head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'timedisplay/css/timedisplay.css' %}"media="screen" title="no title"  charset="utf-8">
+<body>
+<div id="wrapper">
+	<h1 id="header"> The Current Date and Time is:</h1>
+	<div>
+		<h1 id="time" style="text-align: center;">{{ Date }} </h1>
+	</div>
+</div>
+</body>
+</html>

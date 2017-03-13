@@ -1,0 +1,71 @@
+<title>Welcome!</title>
+<%= stylesheet_link_tag "user.css" %>
+
+<div id="wrapper">
+	<h1 id="welcome">Welcome!</h1>
+	<h2 id="toplinks"><%= flash[:notice] %> </h2>
+	<div id="register_box">
+		<form action="/register" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<h1>Register</h1>
+		<p>
+			<label for="first_name">
+			<span>Name: </span>
+			</label>
+			<input type="text" id="first_name" name="user[name]">
+		</p>
+		<p>
+			<label for="last_name">
+			<span>Alias: </span>
+			</label>
+			<input type="text" id="last_name" name="user[alias]">
+		</p>
+		<p>
+			<label for="email">
+			<span>Email: </span>
+			</label>
+			<input type="email" id="email" name="user[email]">
+		</p>
+		<p>
+			<label for="password">
+			<span>Password:</span>
+			</label>
+			<input type="password" name="user[password]" id="password">
+		</p>
+		<p>
+			<span>*Password must be at least 8 characters</span>
+		</p>
+		<p>
+			<label for="password_confirmation">
+			<span>Confirm Password</span>
+			</label>
+			<input type="password" name="user[password_confirmation]" id="password_confirmation">
+		</p>
+		<input id="register" type="submit" name="register" value="Register">
+		</form>
+
+	</div>
+	<div id="login_box">
+		<form action="/login" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<h1>Login</h1>
+		<p>
+			<label for="login_email">
+				<span>Email: </span>
+			</label>
+			<input type="email" name="login_email" id="login_email">
+		</p>
+		<p>
+			<label for="login_password">
+				<span>Password: </span>
+			</label>
+			<input type="password" name="login_password" id="login_password">
+		</p>
+		<input id="login" type="submit" name="login" value="Login">
+		</form>
+	</div>
+	<div id="errors">
+		<h4><%= flash[:error] %></h4>
+	</div>
+
+</div>

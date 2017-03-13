@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterTest</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+<%= nav_bar fixed: :top, brand: "OWC Bangalore", responsive: true do %>
+    <%= menu_group do %>
+        <%= menu_item "Home" %>
+        <%= menu_divider %>
+        <%= drop_down "Bangalore" do %>
+            <%= menu_item "Moving to Bangalore" %>
+            <%= menu_item "Life if Bangalore" %>
+        <% end %>
+        <%= drop_down "Membership" do %>
+            <%= menu_item "Moving to Bangalore" %>
+            <%= menu_item "Life if Bangalore" %>
+        <% end %>
+        <%= drop_down "Our Work" do %>
+            <%= menu_item "Moving to Bangalore" %>
+            <%= menu_item "Life if Bangalore" %>
+        <% end %>
+        <% if current_user %>
+        <%= drop_down "Member's Only" do %>
+            <%= menu_item "Moving to Bangalore" %>
+            <%= menu_item "Life if Bangalore" %>
+        <% end %>
+        <% end %>
+    <% end %>
+    <%= menu_group pull: :right do %>
+        <% if current_user %>
+        	<%= menu_item "Hello, Brandon" %>
+        	<%= menu_item "Inbox" %>
+        	<%= menu_item "Admin" %>
+            <%= menu_item "Log Out" %>
+        <% else %>
+        	<%= drop_down "Login" do %>
+	        	<%= form_for :user, url: "/login_user", html: { class: "" } do |f| %>
+                      <div class="form-inputs">
+                        <%= f.label :email %>
+                        <%= f.text_field :email, required: false, autofocus: true, id: "inputs" %>
+                        <%= f.label :password, id: "pass" %>
+                        <%= f.password_field :password, required: false, id: "inputs" %>
+                      </div>
+                      <div class="form-actions" id="logbut">
+                         <%= f.submit "Login", class: "btn btn-success", id: "loginbutton" %>
+                      </div>
+                      <% end %>
+	        <% end %>
+        <% end %>
+    <% end %>
+<% end %>
+
+
+
+    <%= yield %>
+  </body>
+</html>

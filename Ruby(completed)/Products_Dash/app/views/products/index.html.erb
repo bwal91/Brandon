@@ -1,0 +1,30 @@
+
+<title>All Products</title>
+<%= stylesheet_link_tag "index" %>
+
+<div id="wrapper">
+	<h1>Listing Products</h1>
+	<h3><a id="tocomms" href="/comments/">All Comments</a></h3>
+	<div id="main">
+		<table>
+			<tr>
+				<th>Name: </th>
+				<th>Description: </th>
+				<th>Price: </th>
+				<th>Category: </th>
+				<th>Actions: </th>
+			</tr>
+			<% @products.each do |product| %>
+			<tr>
+				<td> <%= product.name %></td>
+				<td> <%= product.description %> </td>
+				<td> <%= product.pricing %> </td>
+				<td> <%= product.category.name %> </td>
+				<td> <a href="/show/<%= product.id %>" class="links">Show </a>  <a href="/edit/<%= product.id %>" class="links">Edit </a> 
+				<a href="/destroy/<%= product.id %>">Destroy </a></td>
+			</tr>
+			<% end %>
+		</table>
+		<h3><a href="/new" style="color: white; text-decoration: underline;">Add New Product</a></h3>
+	</div>
+</div>

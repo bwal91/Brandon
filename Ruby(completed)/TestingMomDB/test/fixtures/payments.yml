@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  DATE_PAYMENT: MyString
+  DATE_TREASURY: MyString
+  EXPIRATION_DATE: MyString
+  Online: MyString
+  Confirmation#: MyString
+  Leaving_Date: MyString
+  RECEIPT#: MyString
+  Receipt_Book: MyString
+  AMOUNT_PAID: MyString
+  Receipted_By: MyString
+  Date_Base_Input: MyString
+  Comments: MyText
+
+two:
+  DATE_PAYMENT: MyString
+  DATE_TREASURY: MyString
+  EXPIRATION_DATE: MyString
+  Online: MyString
+  Confirmation#: MyString
+  Leaving_Date: MyString
+  RECEIPT#: MyString
+  Receipt_Book: MyString
+  AMOUNT_PAID: MyString
+  Receipted_By: MyString
+  Date_Base_Input: MyString
+  Comments: MyText

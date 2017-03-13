@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Word Generator</title>
+</head>
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static 'randomword/css/randomcss.css' %}"media="screen" title="no title"  charset="utf-8">
+<body>
+<div id="wrapper">
+	<div id="words">
+		<h2>Random Word (attempt #{{request.session.counter}})</h2>
+	</div>
+	<div id="box">
+	{{request.session.name}}
+	</div>
+	<div id="gener">
+		<form action="/generate" method="post">
+		{% csrf_token %}
+			<input  id="butt" type="submit" name="submit" value="Generate">
+		</form>
+		<form action="{% 'timeApp:my_index' %}" method="post">
+			{% csrf_token %}
+			<input type="submit" name="time" value="What Time is It?">
+		</form>
+	</div>
+</div>
+</body>
+</html>

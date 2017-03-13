@@ -1,0 +1,33 @@
+{% extends "login/base.html" %} {% include '/login/base.html' %}
+{% block title %}Create{% endblock %}
+{% block loads %}{% load static %} {% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{% static 'mainmenu/css/hall.css' %}" /> {% endblock %}
+
+{% block content %}
+<div id="wrapper">
+	<div id="header">
+		<h1>Hall of Fame!</h1>
+	</div>
+	<div id="links">
+		<a href="{% url 'Mainmenu:index' %}">Home</a>
+		<a href="{% url 'Login:logout' %}">Logout</a>
+	</div>
+	<div id="main">
+		<table>
+			<tr>
+				<th>Hero</th>
+				<th>User</th>
+				<th>Gold</th>
+			</tr>
+			{% for character in characters %}
+			<tr>
+				<td>{{character.name}}</td>
+				<td>{{character.owned_by.username}}</td>
+				<td>{{character.gold}}</td>
+			</tr>
+			{% endfor %}
+		</table>
+	</div>
+</div>
+{% endblock %}
+

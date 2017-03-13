@@ -1,0 +1,57 @@
+<title>Product <%= @products.name %> Info</title>
+<%= stylesheet_link_tag "index" %>
+
+<div id="wrapper">
+	<h1 style="text-decoration: underline;"><%= @products.name %></h1>
+	<div id="main">
+		<table>
+			<tr>
+				<th>Name: </th>
+				<th>Description: </th>
+				<th>Price: </th>
+				<th>Category: </th>
+				<th>Actions: </th>
+			</tr>
+			<tr>
+				<td> <%= @products.name %></td>
+				<td> <%= @products.description %> </td>
+				<td> <%= @products.pricing %> </td>
+				<% if @current == nil %>
+				<td> Not Assigned Yet </td>
+				<% else %>
+				<td><%= @current.name %></td>
+				<% end %>
+				
+				<td> <a href="/edit/<%= @products.id %>" class="links">Edit </a>  <a href="/back/" class="links">Back </a> 
+				</td>
+			</tr>
+		</table>
+		<div id="comments">
+			<h2 id="commenthead">Comment:</h2>
+			<form action="/comment/<%= @products.id %>" method="post">
+				<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+				
+				<textarea id="combox" name="new_com[comment]" rows="6" cols="4"></textarea>
+				<input type="hidden" name="new_com[product_id]" value="<%= @products.id %>">
+				
+				<input id="createcom" type="submit" name="submit" value="Submit">
+			
+			</form>
+			<h5 style="color: white; text-align: center;" > <%= flash[:error] %> </h5>
+			<table id="showcom">
+					<% if @comments %>
+					<% @comments.each do |comments| %>
+				<tr>
+					<td class="this" id="com"><%= comments.comment %></td>
+					<td class="this"> -- </td>
+					<td class="this" id="date"><%= comments.created_at.strftime("%m/%d/%Y") %></td>
+					<% end %>
+					<% end %>
+					<% if !@comments %>
+					<td>There are No Comments for This Product Yet!</td>
+					<% end %>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>

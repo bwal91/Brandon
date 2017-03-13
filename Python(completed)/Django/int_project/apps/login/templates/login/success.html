@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success on Login/Registration</title>
+</head>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'login/css/success.css' %}"media="screen" title="no title"  charset="utf-8">
+<body>
+<div id="wrapper">
+	<div id="main">
+		
+		<h1>SUCCESS!</h1>
+		<h3>You have successfully Logged in and/or Registered Using:<br><br>{{request.session.name}}  </h3>
+		<h3>Click RETURN to Go Back!</h3>
+		<form action="/goback" method="post">
+		{% csrf_token %}
+		<input type="submit" name="return" value="RETURN">
+		</form>
+		<form action="{% 'projectApp:my_courses' %}" method="post">
+		{% csrf_token %}
+		<input type="submit" name="gocourses" value="Go to Add Courses">
+		</form>
+		
+	</div>
+</div>
+</body>
+</html>

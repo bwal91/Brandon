@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Courses</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'course/css/index.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<div id="add">
+		<h1>Add a new course:</h1>
+	</div>
+	<div id="add1">
+		<form action="add/course" method="post" id="form1">
+		<p id="a">Name: <input id="name" type="text" name="coursename"></p><br>
+		<p id="b">Description: <textarea name="desc" id="box1" rows="8">Write a description for your course here:</textarea></p><br>
+		{% csrf_token %}
+		<input type="submit" name="add" value="Add" id="submitadd">
+		</form>
+	</div>
+	<div id="bottom">
+		<h1 id="courses">Courses:</h1>
+		<div id="table">
+			<table id="table1">
+				<tr>
+					<th>Course Name:</th>
+					<th>Description:</th>
+					<th>Date Added:</th>
+					<th>Actions:</th>
+				</tr>
+				{% for Courses in courses %}
+				<tr>
+				<td>{{Courses.name}}</td>
+				<td>{{Courses.description}}</td>
+				<td>{{Courses.created_at}}</td>
+				<td><a href="/courses/destroy/{{Courses.id}}">Delete</a></td>
+				</tr>
+				{%endfor%}
+			</table>
+			<form action="{% goldApp:my_index" method="post">
+			{% csrf_token %}
+			<input type="submit" name="ninjagold" value="Let's Play a Game">
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

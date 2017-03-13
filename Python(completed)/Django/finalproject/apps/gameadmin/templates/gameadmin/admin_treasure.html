@@ -1,0 +1,77 @@
+{% extends "gameadmin/base.html" %} {% include '/gameadmin/base.html' %}
+{% block title %}Treasure Admin{% endblock %}
+{% block loads %}{% load static %} {% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{% static 'gameadmin/css/admin.css' %}" /> {% endblock %}
+{% block scripts %}<script src="{% static 'gameadmin/js/sorttable.js' %}"></script>{% endblock %}
+{%block header %}Treasure Admin {% endblock %}
+{% block content %}
+        <a href="/mainmenu/admin_menu">Admin Menu</a>
+
+            <h2>Add Treasure</h2>
+            <form class="box" action="add_treasure" method="post">
+                <table>
+                    <tr>
+                        <td class="left">Name: </td>
+                        <td class="right"><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td class="left">Gold: </td>
+                        <td class="right"><input type="number" name="gold"></td>
+                    </tr>
+                    <tr>
+                        <td class="left">Item: </td>
+                        <td class="right"><select name="item">{% for items in items %}
+                            <option value="{{items.id}}">{{items.name}}</option>{% endfor %}
+                            </select></td>
+                    </tr>
+                </table>
+
+                {% csrf_token %}
+                <button class="add" type="submit" name="button">Add Treasure</button>
+                </form>
+                <h2>Current Treasures</h2>
+                <table class="stats">
+                    <tr>
+                        <th class="textleft">Name</th>
+                        <th>Gold</th>
+                        <th>Item</th>
+                        <th>Edit Treasure: </th>
+                        <th>Delete Treasure:</th>
+                        <th class="textleft">Location</th>
+                    </tr>
+                    {% for treasure in treasures %}
+                    <tr>
+                        <td class="textleft">{{treasure.name}}</td>
+                        <td>{{treasure.gold}}</td>
+                        <td>{{treasure.item.name}}</td>
+                        <td>
+                            <form class="box" action="edit_treasure/{{treasure.id}}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" name="button" value="{{treasure.id}}">Edit Treasure</button></form>
+                        </td>
+
+                        <td><form class="box" action="delete_treasure" method="post">
+                                {% csrf_token %}
+                                <button type="submit" name="treasure" value="{{treasure.id}}"> Delete Treasure</button></form>
+                        </td>
+                        <td>
+                                <table class="innertable">
+                                    <tr>
+                                        <th class="textleft">In rooms:</th>
+                                    </tr>
+                                    <tr>
+                                        <tr>
+                                            {% for room in rooms %} {% for room_tr in room.treasure.all%} {% if room_tr.id == treasure.id%}
+                                            <td class="textleft">{{room.name}}</td>
+                                            {% endif %} {% endfor %}
+                                        </tr>
+                                        {% endfor %}
+                                    </tr>
+                                </table>
+                            </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </form>
+
+{% endblock %}

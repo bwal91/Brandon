@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Full Friends</title>
+	<!-- <link rel="stylesheet" type="text/css" href="friends.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='friends3.css') }}">
+</head>
+<body>
+<div id="wrapper">
+	<div id="heading">
+		<h1>
+		Here are some Friends!<br>Feel Free to Add Some Yourself!
+		</h1>
+	</div>
+	<form id="add_users" action="/friends" method="post">
+		<input class="box" type="text" name="first" placeholder="First Name">
+		<input class="box" type="text" name="last" placeholder="Last Name">
+		<input class="box" type="text" name="email" placeholder="Email Address">
+		<input type="submit" name="add" value="Add User" id="add">
+	</form>
+	<div id="forum">
+		<div id="topinfo">
+			<h2>First Name:</h2>
+			<h2>Last Name:</h2>
+			<h2>Email Address:</h2>
+			<h2 id="act">Action:</h2>
+		</div>
+		{%for friend in all_friends:%}
+		<div id="friendsinfo">
+			<p id="fname" class="info">{{friend['first_name']}}</p>
+			<p id="lname" class="info">{{friend['last_name']}}</p>
+			<p id="emailadd" class="info">{{friend['email_add']}}</p>
+			<form id="submit" action="/friends/{{friend['id']}}/edit">
+				<input type="submit" name="update_button" value="Update">
+			</form>
+			<form id="delete" action="/friends/{{friend['id']}}/delete" method='post'>
+				<input type="submit" name="delete_button" value="Delete">
+			</form>
+		</div>	
+		{%endfor%}
+		
+	</div>
+		
+
+</div>
+
+</body>
+</html>

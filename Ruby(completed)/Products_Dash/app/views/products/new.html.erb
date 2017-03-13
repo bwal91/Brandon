@@ -1,0 +1,32 @@
+<title>Add New Product</title>
+<%= stylesheet_link_tag "index" %>
+
+<div id="wrapper">
+	<h1>Add New Product</h1>
+	<div id="add">
+		<form action="/create/" method="post">
+			<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+			Category: <select class="a" name="product[category_id]">
+				<option selected disabled>Pick a Category</option>
+				<% @category.each do |category| %>
+				<option value="<%= category.id %>"><%= category.name %></option>
+				<% end %>
+			</select>
+
+			<br>
+
+			Name: <input class="a" type="text" name="product[name]"><br>
+			
+			Description: <input class="a" type="text" name="product[description]"><br>
+			
+			Price: <input class="a" type="number" name="product[pricing]"><br>
+			
+			<input id="create" type="submit" name="submit" value="Create"><br>
+		<a id="cback" href="/back/" style="color: white; text-decoration: underline;">Back</a>
+		</form>
+		<br>
+	</div>
+	<h5 style="color: white; text-align: center;" > <%= flash[:error].to_s %> </h5>
+</div>
+
+	@user = User.find_by email: [:login_email]

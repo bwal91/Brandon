@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <%= yield :head %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      <%= yield :jquery %>
+    });
+  </script>
+</head>
+<body>
+  <div class='container'>
+    <div id='left_column'><%= yield :left_column %></div>
+    <div id='right_column'><%= yield :right_column %></div>
+  </div>
+</body>
+</html>

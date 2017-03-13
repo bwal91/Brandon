@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Books Home</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'belt/css/index.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h2 id="welcome">Welcome, {{request.session.name}}</h2>
+		<a class="toplinks" href="{% url 'books:add' %}">Add Book and Review</a>
+		<a class="toplinks" href="logout">Logout</a>
+	</div>
+	<div id="reviewssection">
+		<h1>Recent Book Reviews:</h1>
+		
+		{% for Reviews in reviews %}
+		<a class="books" href="title/{{Reviews.book.id}}">{{Reviews.book.book_title}}</a>
+						
+		<p class="books">Rating: {% for i in stars %}&bigstar;{%endfor%} </p>
+		<p class="books"><a href="users/{{Reviews.users.id}}">{{Reviews.users.first_name}}</a> says: {{Reviews.reviews}} </p>
+		<p class="books">{{Reviews.created_at}}</p>
+		<br>
+		{% endfor %}
+	</div>
+	<div id="otherbooks">
+		<h1>Other Books with Reviews:</h1>
+		<select size="11" id="rightbox">
+			{% for Books in books %}
+			<option><a href="{{Books.id}}">{{Books.book_title}}</a></option>
+			<option></option>
+			{% endfor %}
+		</select>
+			
+	</div>
+</div>		
+</body>
+</html>

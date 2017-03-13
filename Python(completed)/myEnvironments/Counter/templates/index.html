@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='count.css') }}">
+	<!-- <link rel="stylesheet" type="text/css" href="count.css"> -->
+</head>
+<body>
+<div id="head">
+	<h1>Counter</h1>
+</div>
+<div id="times">
+	<h2>{{session['count']}} times</h2>
+</div>
+<div>
+	<form action='/button' method="POST">
+	<input type="submit" name="clear" value="Clear!">
+	</form>
+</div>
+</body>
+</html>

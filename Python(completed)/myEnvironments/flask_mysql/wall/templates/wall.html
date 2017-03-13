@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Wall</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='wall.css') }}">
+<body>
+<div id="wrapper">
+	<div id="tophalf">
+		<div id="codingdojo">
+			<h1>CodingDojo Wall</h1>
+		</div>
+		<div id="welcome">
+			<h3 id="first">Welcome {{first_name}}!</h3>
+			<form action="/logoff">
+			<input id="log" type="submit" name="logoff" value="LogOff">
+			</form>
+		</div>
+	</div>
+	<div id="bottomhalf">
+		<div id="postmessage">	
+			<h2 id="post">Post a Message:</h2>
+			<form action="/message" method="post">
+			<textarea name="content" id="messagebox" rows="15" placeholder="Type Message Here..."></textarea>
+			<input id="click" type="submit" name="apply" value="Post a Message">
+			</form>
+		</div>
+		
+		{% for message in messages %}
+		<div id="whofrom">	
+			<p>{{message['first_name']}} - {{message['created_at']}}</p>
+		
+		</div>
+		<div id="blockmess">		
+			<blockquote>
+				{{message['message']}}
+				
+			</blockquote>
+		</div>
+		<div id="blockmess">
+		{% for comment in comments %}
+			{% if message.id == comment.messages_id %}
+				<p>{{ comment.first_name}} says "{{comment['comment']}}" on {{ comment.created_at }}</p>	
+			{% endif %}
+		{% endfor %}
+		</div>
+		<div id="postmessage">	
+			<h2 id="postcomment">Post a Comment:</h2>
+			<form action="/comment/{{message['id']}}" method="post">
+			<textarea name="ccontent" id="commentbox" rows="8" placeholder="Type Comment Here..."></textarea>
+			<input id="click2" type="submit" name="apply" value="Post a Comment">
+			</form>
+			{% endfor %}
+		</div>
+	
+</div>
+</body>
+</html>

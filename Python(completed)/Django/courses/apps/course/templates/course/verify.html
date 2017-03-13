@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Delete Course</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'course/css/verify.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<h1> Are you sure you want to delete the following Course?</h1>
+	<div id="left">
+		<h2>Name:</h2>
+		<h2>Description:</h2>
+	</div>
+	{% for Courses in courses %}
+	<div id="right">
+		<h2>{{Courses.name}}</h2>
+		<p>{{Courses.description}}</p>
+	
+	</div>
+	<div id="buttons">
+		<form action="no" method="post">
+			{% csrf_token %}
+			<input id="a" type="submit" name="No" value="No">
+		</form>
+		<form action="delete" method="post">
+			{% csrf_token %}
+			<input id="b" type="submit" name="Yes" value="Yes! I want to delete this!">
+		</form>
+	{%endfor%}
+	</div>
+
+</div>
+</body>
+</html>

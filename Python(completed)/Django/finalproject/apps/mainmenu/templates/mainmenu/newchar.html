@@ -1,0 +1,71 @@
+{% extends "login/base.html" %} {% include '/login/base.html' %}
+{% block title %}Create{% endblock %}
+{% block loads %}{% load static %} {% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{% static 'mainmenu/css/newchar.css' %}" /> {% endblock %}
+
+{% block content %}
+
+<div id="wrapper">
+	<div id="header">
+		<h1>Create a New Character</h1>
+	</div>
+	<div id="main">
+	<form id="createchar" action="{% url 'Mainmenu:create' %}" method="post">
+		<table>
+			<tr>
+				<td align="left">Name: </td>
+				<td align="right"><input type="text" name="char_name" class="boxa"></td>
+			</tr>
+			<tr>
+				<td align="left">Class: </td>
+				<td align="right"><select name="add_class">
+					<option value="FI">Fighter (+5 strength)</option>
+					<option value="RO">Rogue (+5 dexterity)</option>
+					<option value="WI">Wizard (+5 intelligence)</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td align="left">Stats: </td>
+			</tr>
+			<tr>
+				<td align="left"></td>
+				<td align="right">Strength: <input type="hidden" name="strength" value="{{str}}">{{str}} </td>
+			</tr>
+			<tr>
+				<td align="left"></td>
+				<td align="right">Dexterity:<input type="hidden" name="dext" value="{{dex}}"> {{dex}}</td>
+			</tr>
+			<tr>
+				<td align="left"></td>
+				<td align="right">Intelligence:<input type="hidden" name="intel" value="{{int}}"> {{int}}</td>
+			</tr>
+			<tr>
+				<td align="left"></td>
+				<td align="right">Health:<input type="hidden" name="health" value="{{hea}}"> {{hea}}</td>
+			</tr>
+		</table>
+		<div>
+		{% csrf_token %}
+		<input type="submit" name="savechar" id="save" value="Save Character">
+		</div>
+	</form>
+
+		<div id="dice">
+			<a href="/mainmenu/roll">Roll Dice</a>
+			<!-- #TODO (make 3 rolls) -->
+			<!-- <br><br><p>3 Rolls Left</p> -->
+		</div>
+		<div id="bottom">
+			<a href="{% url 'Mainmenu:index' %}">Home</a>
+			<a href="{% url 'Login:logout' %}">Quit/Logout</a>
+		</div>
+	</div>
+	{% if messages %}
+        <ul class="messages">
+        {% for message in messages %}
+           <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+</div>
+{% endblock %}

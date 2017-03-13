@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+var students = [
+	{first_name: 'Michael', last_name: 'Jordan'},
+	{first_name: 'John', last_name: 'Rosales'},
+	{first_name: 'Mark', last_name: 'Guillen'},
+	{first_name: 'KB', last_name: 'Tonel'}
+]
+for(var i=0; i<students.length; i++){
+	console.log(students[i])
+	for(var key in students[i]){
+		console.log(students[i][key])
+	}
+}
+
+var users = {
+	'Students': [ 
+     {first_name:  'Michael', last_name: 'Jordan'},
+     {first_name: 'John', last_name: 'Rosales'},
+     {first_name: 'Mark', last_name: 'Guillen'},
+     {first_name: 'KB', last_name: 'Tonel'}
+  ],
+ 'Instructors': [
+     {first_name: 'Michael', last_name: 'Choi'},
+     {first_name: 'Martin', last_name: 'Puryear'}
+  ]
+}
+for(var category in users) {
+	// console.log(category);
+	for (var i=0; i<users[category].length; i++){
+		for(var person in users[category][i]){
+			console.log(users[category][i][person]);
+		}
+	}
+}
+
+
+
+</script>
+
+</body>
+</html>

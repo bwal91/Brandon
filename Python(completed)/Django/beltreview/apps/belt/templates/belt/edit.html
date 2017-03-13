@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Review & See Others!</title>
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'belt/css/edit.css' %}"media="screen" title="no title"  charset="utf-8">
+</head>
+<body>
+<div id="wrapper">
+	<div id="header">
+		<h2 id="welcome"></h2>
+		<a class="toplinks" href="{% url 'books:add' %}">Add Book and Review</a>
+		<a class="toplinks" href="logout">Logout</a>
+	</div>
+	<div id="reviewssection">
+		<h1>{{request.session.booktitle}}</h1>
+		{{request.session.all}}
+		<h3>{{request.session.bookauthor}}</h3>
+		<h1 style="text-decoration: underline;">Reviews:</h1>
+		{% for Reviews in reviews %}	
+		<p class="books">Rating: {% for i in stars %}&bigstar;{%endfor%} </p>
+		<p class="books"><a href="users/{{Reviews.users.id}}">{{Reviews.users.first_name}}</a> says: {{Reviews.reviews}} </p>
+		<p class="books">{{Reviews.created_at}}</p>
+		<br>
+		{% endfor %}
+	</div>
+	<div id="otherbooks">
+		<h1>Add a Review:</h1>
+		{% for Reviews in reviews %}
+		<form action="addreview/{{Reviews.book.id}}" method="post">
+		{% endfor %}
+		<textarea rows="10" name="review" id="text"></textarea>
+		<h2>Rating:<select name="rating" id="rating">
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			<option>4</option>
+			<option>5</option>
+		</select> stars.</h2><br>
+		{% csrf_token %}
+		<input id="button" type="submit" name="addbookreview" value="Submit Review">
+		</form>
+	</div>
+
+</div>
+</body>
+</html>

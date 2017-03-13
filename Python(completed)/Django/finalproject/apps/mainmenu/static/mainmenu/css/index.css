@@ -1,0 +1,47 @@
+body {
+	background-color: grey;
+}
+#wrapper {
+	width: 900px;
+	border: 5px rgb(29, 51, 107) solid;
+	border-radius: 10px;
+	min-height: 600px;
+	margin:auto;
+	background-color: black;
+	color: orange;
+
+}
+#header {
+	margin-left: 325px;
+	/*text-decoration: underline;*/
+	display: inline-block;
+	font-size: 30px;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	margin-top: 15px;
+	color: orange;
+}
+h1 {
+	margin-bottom: 5px;
+}
+
+#menu {
+	text-align: center;
+	margin-top: 20px;
+
+}
+ul  {
+	list-style-type: none;
+}
+
+a {
+	font-size: 30px;
+	text-decoration: none;
+	font-family: "Comic Sans MS", cursive, sans-serif
+}
+
+li {
+	margin-bottom: 30px;
+}
+a, a:visited, a:hover, a:active {
+  color: blue;
+}

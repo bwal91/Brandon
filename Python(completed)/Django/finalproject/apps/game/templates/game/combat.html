@@ -1,0 +1,25 @@
+{% extends "game/game.html" %} {% include '/game/game.html' %}
+{% block title %}FIGHT!{% endblock %}
+{% block loads %}{% load static %} {% endblock %}
+{% block css %} <link rel="stylesheet" type="text/css" href="{% static 'game/css/combat.css' %}" /> {% endblock %}
+{%block header %} COMBAT! {% endblock %}
+{% block content %}
+<div id="wrapper">
+	<h1>{{room.name}}</h1>
+
+  <div id="contents">
+		{{Hero}}
+
+		{% for monster in monsters %}
+		{% for monster_kb in monster.killed_by.all %}
+		{% if not }
+
+
+    </div>
+
+  </div>
+
+
+	<a href="/admin">Go Back</a>
+</div>
+{% endblock %}

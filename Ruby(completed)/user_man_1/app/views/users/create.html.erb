@@ -1,0 +1,23 @@
+<title>New User</title>
+
+<h1>New User</h1>
+<div>
+	<%= flash[:error] %>
+	<form action="/users/create/" method="post">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<h3>First Name:</h3>
+		<input type="text" name="user[first_name]">
+		<br>
+		<h3>Last Name:</h3>
+		<input type="text" name="user[last_name]">
+		<br>
+		<h3>Email:</h3>
+		<input type="email" name="user[email]">
+		<br>
+		<h3>Password:</h3>
+		<input type="text" name="user[password]">
+		<br>
+		<br>
+		<input type="submit" name="submit" value="Create">
+	</form>
+</div>

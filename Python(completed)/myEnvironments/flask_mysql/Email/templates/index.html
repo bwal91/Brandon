@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Validation!</title>
+</head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='emailcss.css') }}">
+<!-- <link rel="stylesheet" type="text/css" href="emails.css"> -->
+<body>
+<div id="website">	
+	{% if session['valid']=='valid' %}
+	<div id="valid">
+		<h3 class="yes"> Yay it Works!! </h>
+	</div>
+	{%else%}
+	<div id="notvalid">
+		<h3 class="yes">That is NOT a Valid Email!</h3>
+	</div>
+	{% endif %}
+	<div id="thing">
+	<form action="/validate" method="post"> 
+		<h1>Email Address: <input id="form" name="email" type="text"></h1>
+		<input type="submit" name="submit" id="button" value="Submit">
+	</div>
+	<div id="enter">
+		<h2>
+		You Entered:
+		</h2>
+		{%for email in emails%}
+		<p>{{email['emails']}}</p>
+		{%endfor%}
+	</div>	
+
+</div>
+</body>
+</html>

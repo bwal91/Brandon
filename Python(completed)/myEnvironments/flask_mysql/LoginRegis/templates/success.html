@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Success on Login/Registration</title>
+</head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='success.css') }}">
+<body>
+<div id="wrapper">
+	<div id="main">
+		<h1>SUCCESS!</h1>
+		<h3>You have successfully Logged in and/or Registered!</h3>
+		<h3>Click RETURN to Go Back!</h3>
+		<form action="/goback" method="post">
+		<input type="submit" name="return" value="RETURN">
+		</form>
+	</div>
+</div>
+</body>
+</html>

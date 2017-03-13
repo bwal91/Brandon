@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Result</title>
+	<!-- {% load staticfiles %} -->
+<!-- <link rel="stylesheet" href="{% static 'survey/css/surveyindex.css' %}"media="screen" title="no title"  charset="utf-8"> -->
+{% load staticfiles %}
+</head>
+
+<body>
+	{% if image == "blue" %}
+	<img src="{%static 'ninja/images/leonardo.jpg' %}">
+
+	
+	{% elif image == "orange" %}
+	<img src="{%static 'ninja/images/michelangelo.jpg' %}">
+
+	
+	{% elif image == "red" %}
+	<img src="{%static 'ninja/images/raphael.jpg' %}">
+
+	
+	{% elif image == "purple" %}
+	<img src="{%static 'ninja/images/donatello.jpg' %}">
+
+	
+	{% else %}
+	<img src="{%static 'ninja/images/notapril.jpg' %}">
+	{%endif%}
+
+</body>
+</html> 
